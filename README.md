@@ -4,9 +4,9 @@ This is a starting point for setting up behat testing for a Drupal
 project and then automatically running those tests using Probo.Ci.
 
 ## Setting up behat testing
-1. Copy the `tests` directory to your project root.
+1. Copy the [tests](tests) directory to your project root.
 1. If your project is using Drupal 8, add the following line to the
-`require` section of the [composer.json](tests/composer.json#L2-L4) file:
+[require section of the composer.json](tests/composer.json#L2-L4) file:
 `"guzzlehttp/guzzle" : "^6.0@dev"`
 1. Follow the instructions in [tests/README.md](tests/README.md).  For 
 customizing or troubleshooting, refer to the [Behat Drupal Extension
