@@ -1,10 +1,11 @@
-## Setting up behat testing locally:
+## Setting up behat testing locally
 
 1. Make a copy of `behat.example.yml` named `behat.yml` and update it as
 appropriate.
 2. Run `composer install` in this directory to install dependencies.
 3. Run `./bin/behat` in this directory to run all behat tests.
 
+## A few extras
 ### Tips for running your tests
 - To run only the tests in one feature: 
      `./bin/behat features/example.feature`
