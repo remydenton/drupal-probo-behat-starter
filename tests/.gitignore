@@ -1,0 +1,6 @@
+# Ignore composer vendor and bin directories
+bin
+vendor
+
+# Ignore local config file
+behat.yml

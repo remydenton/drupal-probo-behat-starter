@@ -1,0 +1,27 @@
+assets:
+  - name-of-database-uploaded-to-probo.sql.gz
+steps:
+  - name: Drupal Setup
+    plugin: Drupal
+    database: name-of-database-uploaded-to-probo.sql.gz
+    databaseGzipped: true
+    databaseUpdates: true
+    clearCaches: true
+    subDirectory: docroot
+    revertFeatures: true
+
+  # Get images from staging.
+  - name: Stage file proxy
+    plugin: Script
+    script: |
+      cd /var/www/html
+      drush pm-enable stage_file_proxy --yes
+      drush variable-set stage_file_proxy_origin "http://staging-site-url.com"
+
+  # Run behat tests using the configuration in tests/behat.probo.yml
+  - name: Run behat tests
+    plugin: Script
+    script: |
+      cd /src/tests
+      composer install
+      ./bin/behat --config=behat.probo.yml

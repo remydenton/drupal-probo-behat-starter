@@ -1,0 +1,20 @@
+# Example Local configuration.
+# Copy this file, rename it `behat.yml`, and modify it for your local
+# environment.
+default:
+  extensions:
+    Behat\MinkExtension:
+      # Set the following to your local URL.
+      base_url: https://local.mysite.com
+      # The following three lines are required if you're using a self-signed
+      # SSL certificate.  If this isn't applicable, you can safely delete them.
+      goutte:
+        guzzle_parameters:
+          verify: false
+    Drupal\DrupalExtension:
+      drupal:
+        # Set the following to the absolute path to your Drupal installation.
+        drupal_root: '/Users/Remy/Sites/mysite/docroot'
+
+imports:
+  - behat.default.yml

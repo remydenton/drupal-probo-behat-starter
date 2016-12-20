@@ -1,0 +1,11 @@
+# Behat configuration for when tests are run on probo.ci.
+default:
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://localhost
+    Drupal\DrupalExtension:
+      drupal:
+        drupal_root: '/var/www/html'
+
+imports:
+  - behat.default.yml
