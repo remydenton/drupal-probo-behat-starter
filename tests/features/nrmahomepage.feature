@@ -6,7 +6,7 @@ Feature: Homepage test
     Given I set browser window size
     Then I should see "Insurance"
     When I click "Insurance"
-    #Then the "https://www.nrma.com.au/insurance" should match "/Insurance"
+    Then the "https://www.nrma.com.au/insurance" should match "/Insurance"
 @javascript @2
   Scenario: Test Get a quote link on homepage
     Given I am on "https://www.nrma.com.au/"
